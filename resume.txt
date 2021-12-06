@@ -1,0 +1,15 @@
+ commande importante
+ 
+ pip install "fastapi[all]" pour install fastapi
+ prendre note que l'erreur d''installer visual studion
+ il faudra installer visual studion plus recent
+ 
+ pour activer l'environnement virtuel
+source env/Scripts/activate
+
+pour le desactiver on fait deactivate
+
+pour activer le serveur 
+uvicorn first-api:app --reload
+
+et il faut aller sur http://127.0.0.1:8000
