@@ -1,13 +1,16 @@
- commande importante
- 
- pip install "fastapi[all]" pour install fastapi
- prendre note que l'erreur d''installer visual studion
- il faudra installer visual studion plus recent
- 
- pour activer l'environnement virtuel
-source env/Scripts/activate
+ command important
+ 1: Creation environment virtual
+ $ python3 -m venv env
+ prendre note que cette environnement virtual n'est pas dans
+ le depot git il faudra la creer lors d'un nouveau clone.
 
-pour le desactiver on fait deactivate
+ 2: Pour active environment virtuel : source env/Scripts/activate
+    pour le desactiver on fait deactivate
+
+ 3 : pip install "fastapi[all]" pour install fastapi
+ prendre note que l'erreur d''installer visual studio
+ 
+
 
 pour activer le serveur 
 uvicorn first-api:app --reload
