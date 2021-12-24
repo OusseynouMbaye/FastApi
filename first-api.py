@@ -14,7 +14,22 @@ def index():
     return {"message": "Hello home"}
 
 
-@app.get("/products/{id}")
+@app.get("/products")
+def index():
+    return products
+
+
+@app.get("/products/search")
+def index(name, response: Response):
+    founded_products = [product for product in products if name.lower() in product["name"].lower()]
+    if not founded_products:
+        response.status_code = 404
+        return "No Products Found"
+
+    return founded_products if len(founded_products) > 1 else founded_products[0]
+
+
+@app.get("/products/search")
 def index(id: int, response: Response):
     for product in products:
         if product["id"] == id:
